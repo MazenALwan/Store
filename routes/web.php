@@ -18,8 +18,5 @@ use Symfony\Component\HttpKernel\Profiler\Profile;
 */
 Route::get('/',[ProductController::class,'getProductListPage']);
 Route::get('/Profile',[UserController::class,'getUser']);
-
-
 Route::get('/Profile',[ProfileController::class,'getProfilePage'])->middleware(['auth'])->name('Profile');
-
 require __DIR__.'/auth.php';
