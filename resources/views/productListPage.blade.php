@@ -41,6 +41,7 @@
                 @foreach($productChunk as $product)
                     <div class="col-md-3 mb-3 p-3">
                         <div class="card" style="width: 100%; height: 100% ">
+                            <a href="{{'productDetailPage/'.$product->id}}">
                             <div class="card-body bg-gray-100 dark:bg-gray-900 dark:text-white" style="border-radius: 15px 50px 30px 5px;">
                                 <h5 style="card-title">
                                     {{$product->name}}
@@ -49,6 +50,7 @@
                                     {{$product->description}}
                                 </p>
                             </div>
+                            </a>
                           </div>
                     </div>
                     @endforeach

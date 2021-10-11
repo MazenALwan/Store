@@ -9,7 +9,7 @@ class ProductController extends Controller
     public function getProductListPage() {
 
         $products = Product::get();
-        return view('welcome', ['products' => $products]);
+        return view('productListPage', ['products' => $products]);
     }
     public function create(Request $request) { 
         $rules = [
@@ -26,6 +26,11 @@ class ProductController extends Controller
             $product->quantity = $productData['productQuantity'];
             $product->save();
             return redirect('/')->with('status',"Insert successfully");
+    }
+    public function getProductDetailPage(Request $request) {
+        $product = Product::get()->where('id', $request->route('id'))->first();
+
+        return view('layouts/productDetailPage', ['product'=> $product]);
     }
 }
 
