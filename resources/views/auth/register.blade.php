@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <strong>Register to View Our Products</strong>
+                <strong>Register Now!</strong>
             </a>
         </x-slot>
 
