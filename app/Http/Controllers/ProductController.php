@@ -30,7 +30,7 @@ class ProductController extends Controller
     public function getProductDetailPage(Request $request) {
         $product = Product::get()->where('id', $request->route('id'))->first();
 
-        return view('layouts/productDetailPage', ['product'=> $product]);
+        return view('productDetailPage', ['product'=> $product]);
     }
 }
 

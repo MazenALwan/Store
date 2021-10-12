@@ -1,3 +1,0 @@
-<body>
-    {{$product->name}}
-</body>

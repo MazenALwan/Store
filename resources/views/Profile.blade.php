@@ -5,21 +5,22 @@
         </h2>
     </x-slot>
             
-
-    @foreach($users as $user) 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                     <p> Name : {{$user->name}} </p>
-                     <br>
-                     <p> Email : {{$user->email}} </p>
+                    Change your Credentials and Sumbit em'
+                    <form method="POST" action="{{ route('editProfile')}}">
+                        @csrf
+                        Name: <input type="text" name="name" value="{{Auth::user()->name}}" style="border-radius: 15px 50px 30px 5px;">
                     
+                        Email:  <input type="email" name="email" value="{{Auth::user()->email}}" style="border-radius: 15px 50px 30px 5px;">
+                        <input  type="submit">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-         @endforeach  
 
          
     <div class="py-12">
