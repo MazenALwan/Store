@@ -36,9 +36,9 @@
             </div>
             <div class="container mr-100"> 
                 <div class="dark:text-white row"> 
-                    <div class="col-md-8"><img src="/clothes1.png" style="width:75%; height:75%; margin-left:150px; border-radius: 15px 50px 30px 5px;"></div>
+                    <div class="col-md-8"><img src="/clothes1.png" style="width:75%; height:80%; margin-left:150px; border-radius: 15px 50px 30px 5px;"></div>
                     <div class="col-md-4 mb-3 p-3"> 
-                        <div class="card" style="width: 100%; height: 75%; margin-top:1px;">
+                        <div class="card" style="width: 100%; height: 80%; margin-top:1px;">
                             <div class="card-body bg-gray-100 dark:bg-gray-900 dark:text-white" style="border-radius: 15px 50px 30px 5px; ">
                                 <form method="POST" action="{{ route('editProducts',$product->id)}}">
                                     @csrf
@@ -47,9 +47,9 @@
                                     <input class="bg-gray-100 dark:bg-gray-900 dark:text-white"  type="text" name="description" value="{{$product->description}}" style="card-text;" ></div>
                                    <div class="row">    •The price is:                      
                                     <input class="bg-gray-100 dark:bg-gray-900 dark:text-white"  type="text" name="price" value="{{$product->price}}" style="card-text; " ></div>
-                                    <button class="btn btn-primary" style="margin-left:200px" type="submit">Update</button>
+                                    <button class="bg-gray-100 dark:bg-gray-900 dark:text-white" style="margin-left:200px;border: 2px solid white ; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; " type="submit">Update Product</button>
                                 </form>
-                                <a  href="{{ route('deleteProducts',$product->id)}}">Delete Product</a>
+                                <a class="bg-gray-100 dark:bg-gray-900 dark:text-white" href="{{ route('deleteProducts',$product->id)}}" style="border: 2px solid white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; }">Delete Product</a>
                             </div>
                         </div>
                     </div>
