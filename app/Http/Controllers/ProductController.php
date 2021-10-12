@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class ProductController extends Controller
 {
@@ -32,5 +33,23 @@ class ProductController extends Controller
 
         return view('productDetailPage', ['product'=> $product]);
     }
+
+    public function editProducts(Request $request) {
+      
+        $product = Product::findOrfail($request->route('id'));
+        $product->name= request()->input('name');
+        $product->description= request()->input('description');
+        $product->price= request()->input('price');
+        $product->save();
+
+        return redirect()->to('productDetailPage/'.$request->route('id'));
+    }
+
+    public function deleteProducts(Request $request) {
+        $product = Product::findOrfail($request->route('id'));
+        $product->delete();
+        return redirect()->to('/');
+    }
+
 }
 

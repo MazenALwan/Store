@@ -20,6 +20,10 @@ Route::get('addProduct',[AddProductController::class,'getAddProductPage'])->name
 Route::get('/',[ProductController::class,'getProductListPage']);
 Route::get('profile',[ProfileController::class,'getProfilePage'])->middleware(['auth'])->name('profile');
 Route::post('profile/update',[ProfileController::class,'updateCredentials'])->middleware(['auth'])->name('editProfile');
+
+Route::post('productDetailPage/{id}/edit',[ProductController::class,'editProducts'])->name('editProducts');
+Route::get('productDetailPage/{id}/delete',[ProductController::class,'deleteProducts'])->name('deleteProducts');
+
 Route::post('create',[ProductController::class,'create']);
 Route::get('productDetailPage/{id}',[ProductController::class,'getProductDetailPage']);
 require __DIR__.'/auth.php';

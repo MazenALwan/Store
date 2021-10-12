@@ -15,7 +15,7 @@
                         Name: <input type="text" name="name" value="{{Auth::user()->name}}" style="border-radius: 15px 50px 30px 5px;">
                     
                         Email:  <input type="email" name="email" value="{{Auth::user()->email}}" style="border-radius: 15px 50px 30px 5px;">
-                        <input  type="submit">
+                        <input  type="submit"><br>
                     </form>
                 </div>
             </div>
