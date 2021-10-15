@@ -17,13 +17,13 @@
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Profile</a>
-                        <a href="{{ url('/') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Return To HomePage</a>
+                        <a href="{{ url('/profile') }}" class="text-sm text-white underline">Profile</a>
+                        <a href="{{ url('/') }}" class="text-sm text-white underline">Return To HomePage</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                        <a href="{{ route('login') }}" class="text-sm text-white underline">Log in</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                            <a href="{{ url('/') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Return To HomePage</a>
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-white underline">Register</a>
+                            <a href="{{ url('/') }}" class="text-sm text-white underline">Return To HomePage</a>
                         @endif
                     @endauth
 
@@ -32,12 +32,12 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8" style="position: absolute;top:30px;left:50px">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0 top-0">
-                    <h1 class="text-gray-700 dark:text-gray-500 underline">Devista Shop</h1>
+                    <h1 class="text-white underline">Devista Shop</h1>
                 </div>
             </div>
-                    <form action="/create" method="POST">
+                    <form action="/create" method="POST" >
                         @csrf
-                        <h5 class="dark:text-white"><strong>Insert a product<strong><h5><br>
+                        <h5 class="dark:text-white underline" ><strong>Insert a product<strong><h5><br>
                         <label>Name:</label><br>
                         <input type="text" name="productName" class="w-100" /><br>
                         <label>Description</label><br>
