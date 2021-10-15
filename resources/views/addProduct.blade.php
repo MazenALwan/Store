@@ -32,7 +32,7 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8" style="position: absolute;top:30px;left:50px">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0 top-0">
-                    <h1 class="dark:text-white">Devista Shop</h1>
+                    <h1 class="text-gray-700 dark:text-gray-500 underline">Devista Shop</h1>
                 </div>
             </div>
                     <form action="/create" method="POST">

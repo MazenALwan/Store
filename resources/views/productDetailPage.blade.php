@@ -31,14 +31,14 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8" style="position: absolute;top:30px;left:50px">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0 top-0">
-                    <h1 class="dark:text-white">Devista Shop</h1>
+                    <h1 class="text-gray-700 dark:text-gray-500 underline">Devista Shop</h1>
                 </div>
             </div>
             <div class="container mr-100"> 
                 <div class="dark:text-white row"> 
                     <div class="col-md-8"><img src="/clothes1.png" style="width:75%; height:80%; margin-left:150px; border-radius: 15px 50px 30px 5px;"></div>
                     <div class="col-md-4 mb-3 p-3"> 
-                        <div class="card" style="width: 100%; height: 80%; margin-top:1px;">
+                        <div class="card" style="width: 100%; height: 92%; margin-top:1px;">
                             <div class="card-body bg-gray-100 dark:bg-gray-900 dark:text-white" style="border-radius: 15px 50px 30px 5px; ">
                                 <form method="POST" action="{{ route('editProducts',$product->id)}}">
                                     @csrf
@@ -47,6 +47,8 @@
                                     <input class="bg-gray-100 dark:bg-gray-900 dark:text-white"  type="text" name="description" value="{{$product->description}}" style="card-text;" ></div>
                                    <div class="row">    •The price is:                      
                                     <input class="bg-gray-100 dark:bg-gray-900 dark:text-white"  type="text" name="price" value="{{$product->price}}" style="card-text; " ></div>
+                                    <div class="row">    •Quantity:                     
+                                        <input class="bg-gray-100 dark:bg-gray-900 dark:text-white"  type="text" name="quantity" value="{{$product->quantity}}" style="card-text; " ></div>
                                     <button class="bg-gray-100 dark:bg-gray-900 dark:text-white" style="margin-left:200px;border: 2px solid white ; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; " type="submit">Update Product</button>
                                 </form>
                                 <a class="bg-gray-100 dark:bg-gray-900 dark:text-white" href="{{ route('deleteProducts',$product->id)}}" style="border: 2px solid white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; }">Delete Product</a>

@@ -9,7 +9,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    Change your Credentials and Sumbit em'
+                    Change your Credentials and Sumbit em'<br>
+                    If You Want To:
                     <form method="POST" action="{{ route('editProfile')}}">
                         @csrf
                         Name: <input type="text" name="name" value="{{Auth::user()->name}}" style="border-radius: 15px 50px 30px 5px;">

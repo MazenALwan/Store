@@ -40,6 +40,7 @@ class ProductController extends Controller
         $product->name= request()->input('name');
         $product->description= request()->input('description');
         $product->price= request()->input('price');
+        $product->quantity= request()->input('quantity');
         $product->save();
 
         return redirect()->to('productDetailPage/'.$request->route('id'));
